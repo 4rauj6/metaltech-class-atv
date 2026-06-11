@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetalTech Industrial - Site oficial</title>
+
+    <script src="../atv3/atv3.js" defer></script>
+    <link rel="stylesheet" href="../atv3/atv3.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Cadastrar</a></li>
+            <li><a href="#" id="show-table">Tabela</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>MetalTech Industrial</h1>
+        <h2>Cadastro de Ferramentas</h2>
+
+        <div id="alertMessage" class="message"></div>
+
+        <form id="formFerramenta" action="#">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nome">Nome da Ferramenta (5 a 15 caracteres):</label>
+                    <input type="text" id="nome" placeholder="Ex: Makita">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo">
+                        <option value="">Selecione o tipo...</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Elétrica">Elétrica</option>
+                        <option value="Pneumática">Pneumática</option>
+                        <option value="Medição">Medição</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" placeholder="Ex: 10">
+                </div>
+                <div class="form-group">
+                    <label for="setor">Setor de Utilização:</label>
+                    <select id="setor">
+                        <option value="">Selecione o setor...</option>
+                        <option value="Usinagem">Usinagem</option>
+                        <option value="Montagem">Montagem</option>
+                        <option value="Manutenção">Manutenção</option>
+                        <option value="Soldagem">Soldagem</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigo">Código (Exatamente 5 caracteres):</label>
+                    <input type="text" id="codigo" placeholder="Ex: MT001" maxlength="5">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fabricante">Fabricante:</label>
+                <input type="text" id="fabricante" placeholder="Ex: Gedore">
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Cadastrar Ferramenta</button>
+                <button class="show-table" onclick="showTable()">Ver lista de ferramentas</button>
+            </div>
+        </form>
+        <div class="dashboard">
+            <span>Total de Ferramentas no Sistema:</span>
+            <span id="totalFerramentas">0</span>
+        </div>
+
+        <div class="tabela-container">
+            <h2>Estoque de Ferramentas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Fabricante</th>
+                        <th>Qtd</th>
+                        <th>Setor</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaFerramentas">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2026 MetalTech Industrial. Todos os direitos são reservados da jab</p>
+    </footer>
+
+</body>
+
+</html>
