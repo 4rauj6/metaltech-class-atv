@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MetalTech Industrial - Site oficial</title>
 
-    <script src="../atv3/atv3.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="atv3.js" defer></script>
+    <link rel="stylesheet" href="atv3.css">
 </head>
 
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="">Cadastrar</a></li>
+            <li><a href="#" id="show-table">Tabela</a></li>
             <li><a href="#"></a></li>
         </ul>
     </nav>
@@ -24,7 +24,7 @@
 
         <div id="alertMessage" class="message"></div>
 
-        <form id="formFerramenta">
+        <form id="formFerramenta" action="#">
             <div class="form-row">
                 <div class="form-group">
                     <label for="nome">Nome da Ferramenta (5 a 15 caracteres):</label>
@@ -69,31 +69,37 @@
                 <label for="fabricante">Fabricante:</label>
                 <input type="text" id="fabricante" placeholder="Ex: Gedore">
             </div>
-            <button type="submit">Cadastrar Ferramenta</button>
+
+            <div class="button-group">
+                <button type="submit">Cadastrar Ferramenta</button>
+                <button class="show-table" onclick="showTable()">Ver lista de ferramentas</button>
+            </div>
         </form>
         <div class="dashboard">
             <span>Total de Ferramentas no Sistema:</span>
             <span id="totalFerramentas">0</span>
         </div>
 
-        <h2>Estoque de Ferramentas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Tipo</th>
-                    <th>Fabricante</th>
-                    <th>Qtd</th>
-                    <th>Setor</th>
-                </tr>
-            </thead>
-            <tbody id="tabelaFerramentas">
-            </tbody>
-        </table>
+        <div class="tabela-container">
+            <h2>Estoque de Ferramentas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Fabricante</th>
+                        <th>Qtd</th>
+                        <th>Setor</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaFerramentas">
+                </tbody>
+            </table>
+        </div>
     </div>
     <footer class="footer">
-        <p>&copy; 2026 MetalTech Industrial. Todos os direitos são reservados da jab</p>
+        <p>&copy; 2026 MetalTech Industrial. Todos os direitos são reservados para J.A.B Code</p>
     </footer>
 
 </body>
